@@ -1,0 +1,49 @@
+Blockchain
+----------
+- chainid : 777
+- rpcport : 7771
+- networkid : 7777
+
+Craete Node:
+-------------
+geth --identity "MajorChain" --rpc --rpcport 7773 --rpcapi "eth,net,personal,miner,admin,web3" --networkid 7777 --port 30305 --ipcdisable --datadir ./Node3 console
+
+Node 1:
+----------
+- password: 
+  node1
+- Public address of the key:   
+  0xE96098b6BC419Edc385bd2c11D34a05CC4Ae0aBa
+- Path of the secret key file: 
+  Node1\keystore\UTC--2020-10-15T14-05-31.365506700Z--e96098b6bc419edc385bd2c11d34a05cc4ae0aba
+
+- "enode://3dd0a6888b4c25fbc08425c99ed16be7ea4248b4157c6ebf5bb44e34902e0edf1de696d133f30ee9f4ab451fc31207be4a822b42da0c4a896da06d259c7cdc76@172.26.89.110:30303"
+- port: 30303
+- rpcport: 7771
+
+Node 2:
+----------
+- password
+  node2
+- Public address of the key:   
+  0x9528a051d17c4348BA577750e082026779b9dDab
+- Path of the secret key file: 
+  Node2\keystore\UTC--2020-10-15T14-39-57.159384900Z--9528a051d17c4348ba577750e082026779b9ddab
+
+- port: 30304
+- rpcport: 7772
+- --ipcdisable
+
+Node 3
+----------
+- Password 
+  node3
+
+- Public address of the key:   
+  0xADadC4FF0B668BDe592F8F518A217dC57eFa9269
+- Path of the secret key file: 
+  Node3\keystore\UTC--2020-10-16T03-13-29.248470300Z--adadc4ff0b668bde592f8f518a217dc57efa9269
+
+- port: 30305
+- rpcport: 7773
+- --ipcdisable

@@ -1,0 +1,23 @@
+admin.nodeInfo.gnode
+admin.nodeInfo.enode
+eth.accounts
+eth.getBalance(eth.accounts[0])
+admin.peers
+net.peerCount
+admin.nodeInfo.enode
+admin.peers
+net.peerCount
+admin.nodeInfo.enode
+net.peerCount
+admin.peers
+admin.unlockAccount(eth.accounts[0])
+var sender=eth.accounts[0]
+var receiver="0x9528a051d17c4348BA577750e082026779b9dDab"
+receiver
+sender
+var amount=web3.toWei(1,"ether")
+eth.sendTransaction({from:sender, to:receiver, value: amount})
+eth.accounts
+admin.peers
+eth.accounts
+admin.peers
