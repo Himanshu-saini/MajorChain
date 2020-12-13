@@ -1,0 +1,57 @@
+.navbar{
+  box-sizing: border-box;
+  width:100%;
+  padding:1%;
+  background:rgb(100,100,100);
+  color:white;
+  margin-bottom: 1%;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: flex-end;
+}
+
+.navbar .headingName{
+  font-weight:bold;
+  font-size: 1.4em;
+}
+
+.bodyContainer{
+  box-sizing: border-box;
+  width:100%;
+  padding:1%;
+
+}
+.formContainer{
+  width:100%;
+  box-sizing: border-box;
+  margin-bottom: 2%;
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+}
+.filesTable{
+  width:100%;
+  box-sizing: border-box;
+  display:flex;
+  flex-flow: column nowrap;
+  align-content: center;
+  justify-content: center;
+  font-size: 1em;
+}
+
+.filesTable .tableRow {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding:.5% 0%;
+}
+.filesTable .tableRow .tableHead{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+.filesTable .tableRow .tableItem{
+  width:30%;
+  padding: 0% 2%;
+}

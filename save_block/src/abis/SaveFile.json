@@ -1,0 +1,982 @@
+{
+  "contractName": "SaveFile",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "_fileName",
+          "type": "string"
+        },
+        {
+          "internalType": "string",
+          "name": "_fileHash",
+          "type": "string"
+        }
+      ],
+      "name": "addData",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "getData",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "string",
+              "name": "fileName",
+              "type": "string"
+            },
+            {
+              "internalType": "string",
+              "name": "fileHash",
+              "type": "string"
+            }
+          ],
+          "internalType": "struct SaveFile.fileData[]",
+          "name": "",
+          "type": "tuple[]"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"_fileName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"_fileHash\",\"type\":\"string\"}],\"name\":\"addData\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"getData\",\"outputs\":[{\"components\":[{\"internalType\":\"string\",\"name\":\"fileName\",\"type\":\"string\"},{\"internalType\":\"string\",\"name\":\"fileHash\",\"type\":\"string\"}],\"internalType\":\"struct SaveFile.fileData[]\",\"name\":\"\",\"type\":\"tuple[]\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/E/Blockchain/MajorChain/save_block/contracts/SaveFile.sol\":\"SaveFile\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/E/Blockchain/MajorChain/save_block/contracts/SaveFile.sol\":{\"keccak256\":\"0x7d73ef7f5bf54fdff56618381aa4117e1c94d97aff853cb30323a0194a6ea303\",\"urls\":[\"bzz-raw://0b44f8a0b1d7fb524f4e41a5e88d783c96e659e0be4de42b32e1550154b29e40\",\"dweb:/ipfs/QmVGnYYMYR9rXxY8FBerEP9yaSv7MgFkwB1Yy2TRRmox9k\"]}},\"version\":1}",
+  "bytecode": "0x608060405234801561001057600080fd5b5061066c806100206000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80633bc5de301461003b578063528407e514610059575b600080fd5b610043610075565b6040516100509190610506565b60405180910390f35b610073600480360361006e9190810190610394565b610218565b005b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561020f5783829060005260206000209060020201604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101555780601f1061012a57610100808354040283529160200191610155565b820191906000526020600020905b81548152906001019060200180831161013857829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101f75780601f106101cc576101008083540402835291602001916101f7565b820191906000526020600020905b8154815290600101906020018083116101da57829003601f168201915b50505050508152505081526020019060010190610099565b50505050905090565b600060405180604001604052808481526020018381525090806001815401808255809150509060018203906000526020600020906002020160009091929091909150600082015181600001908051906020019061027692919061029b565b50602082015181600101908051906020019061029392919061029b565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102dc57805160ff191683800117855561030a565b8280016001018555821561030a579182015b828111156103095782518255916020019190600101906102ee565b5b509050610317919061031b565b5090565b61033d91905b80821115610339576000816000905550600101610321565b5090565b90565b600082601f83011261035157600080fd5b813561036461035f82610555565b610528565b9150808252602083016020830185838301111561038057600080fd5b61038b8382846105d6565b50505092915050565b600080604083850312156103a757600080fd5b600083013567ffffffffffffffff8111156103c157600080fd5b6103cd85828601610340565b925050602083013567ffffffffffffffff8111156103ea57600080fd5b6103f685828601610340565b9150509250929050565b600061040c83836104c2565b905092915050565b600061041f82610591565b61042981856105b4565b93508360208202850161043b85610581565b8060005b8581101561047757848403895281516104588582610400565b9450610463836105a7565b925060208a0199505060018101905061043f565b50829750879550505050505092915050565b60006104948261059c565b61049e81856105c5565b93506104ae8185602086016105e5565b6104b781610618565b840191505092915050565b600060408301600083015184820360008601526104df8282610489565b915050602083015184820360208601526104f98282610489565b9150508091505092915050565b600060208201905081810360008301526105208184610414565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561054b57600080fd5b8060405250919050565b600067ffffffffffffffff82111561056c57600080fd5b601f19601f8301169050602081019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b82818337600083830152505050565b60005b838110156106035780820151818401526020810190506105e8565b83811115610612576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a723158204aea28be0351b8bec74803daf4435439e0c0bd9af3eb1e33bd6f40b1cd7dc67f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100365760003560e01c80633bc5de301461003b578063528407e514610059575b600080fd5b610043610075565b6040516100509190610506565b60405180910390f35b610073600480360361006e9190810190610394565b610218565b005b60606000805480602002602001604051908101604052809291908181526020016000905b8282101561020f5783829060005260206000209060020201604051806040016040529081600082018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101555780601f1061012a57610100808354040283529160200191610155565b820191906000526020600020905b81548152906001019060200180831161013857829003601f168201915b50505050508152602001600182018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156101f75780601f106101cc576101008083540402835291602001916101f7565b820191906000526020600020905b8154815290600101906020018083116101da57829003601f168201915b50505050508152505081526020019060010190610099565b50505050905090565b600060405180604001604052808481526020018381525090806001815401808255809150509060018203906000526020600020906002020160009091929091909150600082015181600001908051906020019061027692919061029b565b50602082015181600101908051906020019061029392919061029b565b505050505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102dc57805160ff191683800117855561030a565b8280016001018555821561030a579182015b828111156103095782518255916020019190600101906102ee565b5b509050610317919061031b565b5090565b61033d91905b80821115610339576000816000905550600101610321565b5090565b90565b600082601f83011261035157600080fd5b813561036461035f82610555565b610528565b9150808252602083016020830185838301111561038057600080fd5b61038b8382846105d6565b50505092915050565b600080604083850312156103a757600080fd5b600083013567ffffffffffffffff8111156103c157600080fd5b6103cd85828601610340565b925050602083013567ffffffffffffffff8111156103ea57600080fd5b6103f685828601610340565b9150509250929050565b600061040c83836104c2565b905092915050565b600061041f82610591565b61042981856105b4565b93508360208202850161043b85610581565b8060005b8581101561047757848403895281516104588582610400565b9450610463836105a7565b925060208a0199505060018101905061043f565b50829750879550505050505092915050565b60006104948261059c565b61049e81856105c5565b93506104ae8185602086016105e5565b6104b781610618565b840191505092915050565b600060408301600083015184820360008601526104df8282610489565b915050602083015184820360208601526104f98282610489565b9150508091505092915050565b600060208201905081810360008301526105208184610414565b905092915050565b6000604051905081810181811067ffffffffffffffff8211171561054b57600080fd5b8060405250919050565b600067ffffffffffffffff82111561056c57600080fd5b601f19601f8301169050602081019050919050565b6000819050602082019050919050565b600081519050919050565b600081519050919050565b6000602082019050919050565b600082825260208201905092915050565b600082825260208201905092915050565b82818337600083830152505050565b60005b838110156106035780820151818401526020810190506105e8565b83811115610612576000848401525b50505050565b6000601f19601f830116905091905056fea365627a7a723158204aea28be0351b8bec74803daf4435439e0c0bd9af3eb1e33bd6f40b1cd7dc67f6c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "62:422:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:422:2;;;;;;;",
+  "deployedSourceMap": "62:422:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;62:422:2;;;;;;;;;;;;;;;;;;;;;;;;396:85;;;:::i;:::-;;;;;;;;;;;;;;;;244:130;;;;;;;;;;;;;;;;:::i;:::-;;396:85;435:18;467:9;460:16;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;396:85;:::o;244:130::-;324:9;339:29;;;;;;;;348:9;339:29;;;;358:9;339:29;;;324:45;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;324:45:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;244:130;;:::o;62:422::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;75:2;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:578;;;597:2;585:9;576:7;572:23;568:32;565:2;;;613:1;610;603:12;565:2;676:1;665:9;661:17;648:31;699:18;691:6;688:30;685:2;;;731:1;728;721:12;685:2;751:63;806:7;797:6;786:9;782:22;751:63;;;741:73;;627:193;879:2;868:9;864:18;851:32;903:18;895:6;892:30;889:2;;;935:1;932;925:12;889:2;955:63;1010:7;1001:6;990:9;986:22;955:63;;;945:73;;830:194;559:475;;;;;;1042:237;;1183:90;1269:3;1261:6;1183:90;;;1169:104;;1162:117;;;;;1352:1008;;1537:74;1605:5;1537:74;;;1624:106;1723:6;1718:3;1624:106;;;1617:113;;1753:3;1795:4;1787:6;1783:17;1778:3;1774:27;1822:76;1892:5;1822:76;;;1918:7;1946:1;1931:390;1956:6;1953:1;1950:13;1931:390;;;2018:9;2012:4;2008:20;2003:3;1996:33;2063:6;2057:13;2085:104;2184:4;2169:13;2085:104;;;2077:112;;2206:80;2279:6;2206:80;;;2196:90;;2309:4;2304:3;2300:14;2293:21;;1988:333;1978:1;1975;1971:9;1966:14;;1931:390;;;1935:14;2334:4;2327:11;;2351:3;2344:10;;1516:844;;;;;;;;;;2368:319;;2466:35;2495:5;2466:35;;;2513:61;2567:6;2562:3;2513:61;;;2506:68;;2579:52;2624:6;2619:3;2612:4;2605:5;2601:16;2579:52;;;2652:29;2674:6;2652:29;;;2647:3;2643:39;2636:46;;2446:241;;;;;;2753:631;;2888:4;2883:3;2879:14;2975:4;2968:5;2964:16;2958:23;3027:3;3021:4;3017:14;3010:4;3005:3;3001:14;2994:38;3047:69;3111:4;3097:12;3047:69;;;3039:77;;2908:220;3205:4;3198:5;3194:16;3188:23;3257:3;3251:4;3247:14;3240:4;3235:3;3231:14;3224:38;3277:69;3341:4;3327:12;3277:69;;;3269:77;;3138:220;3375:4;3368:11;;2861:523;;;;;;3391:441;;3599:2;3588:9;3584:18;3576:26;;3649:9;3643:4;3639:20;3635:1;3624:9;3620:17;3613:47;3674:148;3817:4;3808:6;3674:148;;;3666:156;;3570:262;;;;;3839:256;;3901:2;3895:9;3885:19;;3939:4;3931:6;3927:17;4038:6;4026:10;4023:22;4002:18;3990:10;3987:34;3984:62;3981:2;;;4059:1;4056;4049:12;3981:2;4079:10;4075:2;4068:22;3879:216;;;;;4102:322;;4246:18;4238:6;4235:30;4232:2;;;4278:1;4275;4268:12;4232:2;4345:4;4341:9;4334:4;4326:6;4322:17;4318:33;4310:41;;4409:4;4403;4399:15;4391:23;;4169:255;;;;4431:171;;4537:3;4529:11;;4575:4;4570:3;4566:14;4558:22;;4523:79;;;;4609:157;;4738:5;4732:12;4722:22;;4703:63;;;;4773:118;;4863:5;4857:12;4847:22;;4828:63;;;;4898:128;;5016:4;5011:3;5007:14;4999:22;;4993:33;;;;5034:198;;5184:6;5179:3;5172:19;5221:4;5216:3;5212:14;5197:29;;5165:67;;;;;5241:153;;5346:6;5341:3;5334:19;5383:4;5378:3;5374:14;5359:29;;5327:67;;;;;5403:145;5484:6;5479:3;5474;5461:30;5540:1;5531:6;5526:3;5522:16;5515:27;5454:94;;;;5557:268;5622:1;5629:101;5643:6;5640:1;5637:13;5629:101;;;5719:1;5714:3;5710:11;5704:18;5700:1;5695:3;5691:11;5684:39;5665:2;5662:1;5658:10;5653:15;;5629:101;;;5745:6;5742:1;5739:13;5736:2;;;5810:1;5801:6;5796:3;5792:16;5785:27;5736:2;5606:219;;;;;5833:97;;5921:2;5917:7;5912:2;5905:5;5901:14;5897:28;5887:38;;5881:49;;;",
+  "source": "pragma solidity ^0.5.0;\r\npragma experimental ABIEncoderV2;\r\n\r\ncontract SaveFile {\r\n    // variable to store data\r\n    struct fileData{\r\n        string fileName;\r\n        string fileHash;\r\n    }\r\n\tfileData [] filesList;\r\n\t\r\n\t// Write Function\r\n\tfunction addData(string memory _fileName, string memory _fileHash) public {\r\n\t  filesList.push(fileData(_fileName,_fileHash));\r\n\t}\r\n\t// Read Function\r\n\tfunction getData() public view returns(fileData [] memory){\r\n\t  return filesList;\r\n\t}\r\n}",
+  "sourcePath": "E:\\Blockchain\\MajorChain\\save_block\\contracts\\SaveFile.sol",
+  "ast": {
+    "absolutePath": "/E/Blockchain/MajorChain/save_block/contracts/SaveFile.sol",
+    "exportedSymbols": {
+      "SaveFile": [
+        116
+      ]
+    },
+    "id": 117,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 80,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "id": 81,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 116,
+        "linearizedBaseContracts": [
+          116
+        ],
+        "name": "SaveFile",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SaveFile.fileData",
+            "id": 86,
+            "members": [
+              {
+                "constant": false,
+                "id": 83,
+                "name": "fileName",
+                "nodeType": "VariableDeclaration",
+                "scope": 86,
+                "src": "144:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 82,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "144:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 85,
+                "name": "fileHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 86,
+                "src": "170:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 84,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "fileData",
+            "nodeType": "StructDefinition",
+            "scope": 116,
+            "src": "118:75:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 89,
+            "name": "filesList",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "196:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+              "typeString": "struct SaveFile.fileData[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 87,
+                "name": "fileData",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 86,
+                "src": "196:8:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_fileData_$86_storage_ptr",
+                  "typeString": "struct SaveFile.fileData"
+                }
+              },
+              "id": 88,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "196:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage_ptr",
+                "typeString": "struct SaveFile.fileData[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 105,
+              "nodeType": "Block",
+              "src": "318:56:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 100,
+                            "name": "_fileName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 91,
+                            "src": "348:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 101,
+                            "name": "_fileHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93,
+                            "src": "358:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 99,
+                          "name": "fileData",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 86,
+                          "src": "339:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_fileData_$86_storage_ptr_$",
+                            "typeString": "type(struct SaveFile.fileData storage pointer)"
+                          }
+                        },
+                        "id": 102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "339:29:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_fileData_$86_memory",
+                          "typeString": "struct SaveFile.fileData memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_fileData_$86_memory",
+                          "typeString": "struct SaveFile.fileData memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 96,
+                        "name": "filesList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 89,
+                        "src": "324:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+                          "typeString": "struct SaveFile.fileData storage ref[] storage ref"
+                        }
+                      },
+                      "id": 98,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "324:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_fileData_$86_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct SaveFile.fileData storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "324:45:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "324:45:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 106,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_fileName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 106,
+                  "src": "261:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "261:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "_fileHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 106,
+                  "src": "286:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "260:50:2"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "318:0:2"
+            },
+            "scope": 116,
+            "src": "244:130:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 114,
+              "nodeType": "Block",
+              "src": "454:27:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 112,
+                    "name": "filesList",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 89,
+                    "src": "467:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+                      "typeString": "struct SaveFile.fileData storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 111,
+                  "id": 113,
+                  "nodeType": "Return",
+                  "src": "460:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 115,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "412:2:2"
+            },
+            "returnParameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 110,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 115,
+                  "src": "435:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_fileData_$86_memory_$dyn_memory_ptr",
+                    "typeString": "struct SaveFile.fileData[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 108,
+                      "name": "fileData",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 86,
+                      "src": "435:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_fileData_$86_storage_ptr",
+                        "typeString": "struct SaveFile.fileData"
+                      }
+                    },
+                    "id": 109,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "435:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage_ptr",
+                      "typeString": "struct SaveFile.fileData[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:20:2"
+            },
+            "scope": 116,
+            "src": "396:85:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 117,
+        "src": "62:422:2"
+      }
+    ],
+    "src": "0:484:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/E/Blockchain/MajorChain/save_block/contracts/SaveFile.sol",
+    "exportedSymbols": {
+      "SaveFile": [
+        116
+      ]
+    },
+    "id": 117,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 80,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:2"
+      },
+      {
+        "id": 81,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "25:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 116,
+        "linearizedBaseContracts": [
+          116
+        ],
+        "name": "SaveFile",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "SaveFile.fileData",
+            "id": 86,
+            "members": [
+              {
+                "constant": false,
+                "id": 83,
+                "name": "fileName",
+                "nodeType": "VariableDeclaration",
+                "scope": 86,
+                "src": "144:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 82,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "144:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 85,
+                "name": "fileHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 86,
+                "src": "170:15:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 84,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "170:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "fileData",
+            "nodeType": "StructDefinition",
+            "scope": 116,
+            "src": "118:75:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 89,
+            "name": "filesList",
+            "nodeType": "VariableDeclaration",
+            "scope": 116,
+            "src": "196:21:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+              "typeString": "struct SaveFile.fileData[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 87,
+                "name": "fileData",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 86,
+                "src": "196:8:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_fileData_$86_storage_ptr",
+                  "typeString": "struct SaveFile.fileData"
+                }
+              },
+              "id": 88,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "196:11:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage_ptr",
+                "typeString": "struct SaveFile.fileData[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 105,
+              "nodeType": "Block",
+              "src": "318:56:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "id": 100,
+                            "name": "_fileName",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 91,
+                            "src": "348:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "id": 101,
+                            "name": "_fileHash",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 93,
+                            "src": "358:9:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            },
+                            {
+                              "typeIdentifier": "t_string_memory_ptr",
+                              "typeString": "string memory"
+                            }
+                          ],
+                          "id": 99,
+                          "name": "fileData",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 86,
+                          "src": "339:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_fileData_$86_storage_ptr_$",
+                            "typeString": "type(struct SaveFile.fileData storage pointer)"
+                          }
+                        },
+                        "id": 102,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "339:29:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_fileData_$86_memory",
+                          "typeString": "struct SaveFile.fileData memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_fileData_$86_memory",
+                          "typeString": "struct SaveFile.fileData memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 96,
+                        "name": "filesList",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 89,
+                        "src": "324:9:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+                          "typeString": "struct SaveFile.fileData storage ref[] storage ref"
+                        }
+                      },
+                      "id": 98,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "324:14:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_fileData_$86_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct SaveFile.fileData storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 103,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "324:45:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 104,
+                  "nodeType": "ExpressionStatement",
+                  "src": "324:45:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 106,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "addData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 94,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 91,
+                  "name": "_fileName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 106,
+                  "src": "261:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 90,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "261:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 93,
+                  "name": "_fileHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 106,
+                  "src": "286:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 92,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "286:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "260:50:2"
+            },
+            "returnParameters": {
+              "id": 95,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "318:0:2"
+            },
+            "scope": 116,
+            "src": "244:130:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 114,
+              "nodeType": "Block",
+              "src": "454:27:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 112,
+                    "name": "filesList",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 89,
+                    "src": "467:9:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage",
+                      "typeString": "struct SaveFile.fileData storage ref[] storage ref"
+                    }
+                  },
+                  "functionReturnParameters": 111,
+                  "id": 113,
+                  "nodeType": "Return",
+                  "src": "460:16:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 115,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getData",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "412:2:2"
+            },
+            "returnParameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 110,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 115,
+                  "src": "435:18:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_fileData_$86_memory_$dyn_memory_ptr",
+                    "typeString": "struct SaveFile.fileData[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "contractScope": null,
+                      "id": 108,
+                      "name": "fileData",
+                      "nodeType": "UserDefinedTypeName",
+                      "referencedDeclaration": 86,
+                      "src": "435:8:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_fileData_$86_storage_ptr",
+                        "typeString": "struct SaveFile.fileData"
+                      }
+                    },
+                    "id": 109,
+                    "length": null,
+                    "nodeType": "ArrayTypeName",
+                    "src": "435:11:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_fileData_$86_storage_$dyn_storage_ptr",
+                      "typeString": "struct SaveFile.fileData[]"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "434:20:2"
+            },
+            "scope": 116,
+            "src": "396:85:2",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 117,
+        "src": "62:422:2"
+      }
+    ],
+    "src": "0:484:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "3": {
+      "events": {},
+      "links": {},
+      "address": "0xDcd972782890990A641E409c3A44926C9a485A81",
+      "transactionHash": "0xe8ebc32c0d64e404810ca82931e98bc1408a614fb14b302f47df52d6e8ec963f"
+    }
+  },
+  "schemaVersion": "3.1.0",
+  "updatedAt": "2020-12-10T05:04:44.085Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
